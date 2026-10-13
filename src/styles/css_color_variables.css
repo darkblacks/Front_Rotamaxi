@@ -1,0 +1,49 @@
+/* Global RotaMaxi color tokens. Page/component CSS must reference these variables instead of duplicating palette values. */
+:root {
+/* Vermelho institucional RotaMaxi: fundo do topo e do bloco da marca no painel. */
+    --brand: #c30e20;
+    --brand-forte: #9f0e1c;
+    --brand-linha: #df4251;
+    /* Texto sobre o vermelho. O claro cumpre AAA (10.2:1) e o suave, AA (6.8:1). */
+    --brand-ink: #FFFFFF;
+    --brand-ink-suave: #F3C9C9;
+    --bg: #F5F7FA;
+    --panel: #FFFFFF;
+    --panel2: #F5F7FA;
+    --ink: #182435;
+    --muted: #687586;
+    --line: #E2E7ED;
+    --accent: #cc1527;
+    --accent-soft: #FCE8EB;
+    --ok: #1E8E3E;
+    --ok-soft: #E3F4E8;
+    --warn: #9A5B00;
+    --warn-soft: #FDEFD3;
+    --bad: #C62828;
+    --bad-soft: #FDE2E2;
+    --info: #1A73E8;
+    --info-soft: #E1EEFD;
+    --track: #E8E8EA;
+    /* Véu da gaveta de navegação no telefone; escurece o conteúdo sob o `aside` aberto. */
+    --cortina: rgb(0 0 0 / 45%);
+}
+
+[data-theme='escuro'] {
+--bg: #0e1012;
+    --panel: #16191c;
+    --panel2: #1c2024;
+    --ink: #ecedee;
+    --muted: #9ba1a8;
+    --line: #2a2f34;
+    --accent: #ff6678;
+    --accent-soft: #3b1e28;
+    --ok: #5bd08f;
+    --ok-soft: #15301f;
+    --warn: #f2b64b;
+    --warn-soft: #352a12;
+    --bad: #ff7a6e;
+    --bad-soft: #3a1a17;
+    --info: #7fb0f0;
+    --info-soft: #172a42;
+    --track: #23282d;
+}

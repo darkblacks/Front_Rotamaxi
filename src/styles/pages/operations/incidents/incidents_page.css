@@ -1,0 +1,169 @@
+.pagina {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pagina__cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.pagina__titulo {
+    margin: 0;
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+.pagina__recorte {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.pagina__colunas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.pagina__principal {
+    flex: 999 1 560px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pagina__lateral {
+    flex: 1 1 280px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pagina__falha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--bad-soft);
+    color: var(--bad);
+    font-size: 0.8125rem;
+}
+
+.pagina__botao {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font: 500 0.75rem var(--font-sans);
+}
+
+.pagina__nota {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-wrap: pretty;
+}
+
+.linha {
+    cursor: pointer;
+}
+
+.linha--aberta td {
+    background: var(--panel2);
+}
+
+.linha__codigo {
+    font: 600 0.75rem var(--font-mono);
+    color: var(--muted);
+}
+
+.linha__total {
+    font: 600 0.8125rem var(--font-mono);
+    text-align: right;
+}
+
+.linha__percentual {
+    font: 500 0.75rem var(--font-mono);
+    text-align: right;
+    color: var(--muted);
+}
+
+.linha__trilho {
+    height: 8px;
+    border-radius: 2px;
+    background: var(--track);
+    overflow: hidden;
+}
+
+.linha__fatia {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.6s;
+}
+
+.linha__exigencias {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.linha__exigencia {
+    font-size: 0.625rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--line);
+    color: var(--muted);
+}
+
+.taxa__rotulo {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.taxa__valor {
+    font: 600 2rem/1 var(--font-mono);
+    color: var(--accent);
+}
+
+.taxa__complemento {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.nota__numero {
+    font: 600 0.8125rem var(--font-mono);
+}
+
+.nota__serie,
+.nota__cidade {
+    display: block;
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.pagina__abas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.pagina__botao--ativo {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+}

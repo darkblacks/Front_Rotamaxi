@@ -1,0 +1,6 @@
+.cfp { display: flex; flex-direction: column; gap: 16px; }
+.cfp__voltar { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); text-decoration: none; font-size: 0.8125rem; font-weight: 600; }
+.cfp__texto { margin: 0; font-size: 0.8125rem; color: var(--muted); }
+.cfp__acoes { display: flex; flex-wrap: wrap; gap: 8px; }
+.cfp__botao { display: inline-flex; align-items: center; gap: 6px; min-height: 38px; padding: 6px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); font: 600 0.8125rem var(--font-sans); cursor: pointer; }
+.cfp__botao--principal { background: var(--accent); border-color: var(--accent); color: var(--brand-ink); }

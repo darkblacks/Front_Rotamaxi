@@ -1,0 +1,210 @@
+.mapa-pagina {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.mapa-pagina__cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.mapa-pagina__titulo {
+    margin: 0;
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+.mapa-pagina__recorte {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 0.8125rem;
+}
+
+.mapa-pagina__ativos {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.mapa-pagina__botao {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 5px 12px;
+    font: 500 0.75rem var(--font-sans);
+    cursor: pointer;
+}
+
+.mapa-pagina__aviso {
+    margin: 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: var(--warn-soft);
+    color: var(--warn);
+    font-size: 0.75rem;
+}
+
+.mapa-pagina__falha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--bad-soft);
+    color: var(--bad);
+    font-size: 0.8125rem;
+}
+
+.mapa-pagina__grade {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 14px;
+    align-items: start;
+}
+
+.mapa-pagina__mapa {
+    position: sticky;
+    top: 8px;
+    height: max(520px, calc(100vh - 300px));
+}
+
+.mapa-pagina__sobre {
+    position: absolute;
+    left: 50%;
+    top: 12px;
+    transform: translateX(-50%);
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.75rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+    z-index: 2;
+}
+
+.mapa-pagina__painel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+    max-height: max(520px, calc(100vh - 300px));
+    overflow-y: auto;
+}
+
+.mapa-pagina__resumo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.mapa-pagina__meta {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.mapa-pagina__diverg {
+    color: var(--bad);
+}
+
+.mapa-pagina__avisos {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.75rem;
+    color: var(--warn);
+}
+
+.mapa-pagina__abas {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--line);
+}
+
+.mapa-pagina__aba {
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    padding: 8px 10px;
+    font: 600 0.75rem var(--font-sans);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.mapa-pagina__aba--ativa {
+    color: var(--ink);
+    border-bottom-color: var(--accent);
+}
+
+.mapa-pagina__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mapa-pagina__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: left;
+    padding: 9px 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    color: var(--ink);
+    cursor: pointer;
+    font: inherit;
+}
+
+.mapa-pagina__item-titulo {
+    font-size: 0.8125rem;
+    font-weight: 650;
+}
+
+.mapa-pagina__item-meta {
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.mapa-pagina__item-atraso {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--bad);
+}
+
+/* Viewport pequeno: mapa em cima, painel logo abaixo (abas), sem rolagem interna. */
+@media (max-width: 900px) {
+    .mapa-pagina__grade {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .mapa-pagina__mapa {
+        position: relative;
+        top: auto;
+        height: 58vh;
+        min-height: 320px;
+        order: -1;
+    }
+
+    .mapa-pagina__painel {
+        max-height: none;
+        overflow: visible;
+    }
+}

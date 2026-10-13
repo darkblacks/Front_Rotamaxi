@@ -1,0 +1,7 @@
+.painel-raiz {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 0.875rem;
+    line-height: 1.45;
+}

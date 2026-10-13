@@ -1,0 +1,31 @@
+.conexao {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font: 500 0.6875rem var(--font-sans);
+    color: var(--muted);
+}
+
+.conexao__ponto {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.conexao__ponto--pulsando {
+    animation: conexao-pulsar 2s infinite;
+}
+
+@keyframes conexao-pulsar {
+    0% {
+        box-shadow: 0 0 0 0 rgb(35 160 90 / 55%);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgb(35 160 90 / 0%);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgb(35 160 90 / 0%);
+    }
+}

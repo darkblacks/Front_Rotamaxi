@@ -1,0 +1,133 @@
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.modal__caixa {
+    width: 100%;
+    max-width: 460px;
+    max-height: 100%;
+    overflow: auto;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal__cabecalho {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.modal__titulo {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.modal__nota {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.modal__falha {
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: var(--bad-soft);
+    color: var(--bad);
+    font-size: 0.75rem;
+}
+
+.modal__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.modal__rotulo {
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.modal__controle {
+    border: 1px solid var(--line);
+    background: var(--panel2);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 7px 9px;
+    font: 500 0.8125rem var(--font-sans);
+    width: 100%;
+}
+
+.modal__controle--texto {
+    resize: vertical;
+}
+
+.modal__numeros {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.modal__diferenca {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.8125rem;
+}
+
+.modal__diferenca strong {
+    font: 600 1.25rem/1 var(--font-mono);
+}
+
+.modal__diferenca small,
+.modal__erro {
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.modal__erro {
+    color: var(--bad);
+}
+
+.modal__acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.modal__botao,
+.modal__fechar {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 7px 12px;
+    cursor: pointer;
+    font: 500 0.75rem var(--font-sans);
+}
+
+.modal__botao--primario {
+    background: var(--ink);
+    color: var(--panel);
+    border-color: var(--ink);
+}
+
+.modal__botao:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}

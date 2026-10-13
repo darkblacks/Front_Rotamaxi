@@ -1,0 +1,65 @@
+.ocorrencias {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.ocorrencias__linha {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ocorrencias__rotulo {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 0.75rem;
+}
+
+.ocorrencias__rotulo b {
+    font: 600 0.6875rem var(--font-mono);
+    color: var(--muted);
+}
+
+.ocorrencias__total {
+    font: 500 0.75rem var(--font-mono);
+}
+
+.ocorrencias__trilho {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--track);
+    overflow: hidden;
+}
+
+.ocorrencias__fatia {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.6s;
+}
+
+.ocorrencias__esqueleto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ocorrencias__linha-esqueleto {
+    height: 22px;
+    border-radius: 4px;
+    background: var(--track);
+    animation: ocorrencias-pulsar 1.2s ease-in-out infinite;
+}
+
+@keyframes ocorrencias-pulsar {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}

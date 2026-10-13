@@ -1,0 +1,31 @@
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.filtros__periodos {
+    display: flex;
+    gap: 2px;
+    padding: 3px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.filtros__periodo {
+    border: 0;
+    cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--muted);
+    font: 500 0.75rem var(--font-sans);
+}
+
+.filtros__periodo--ativo {
+    background: var(--ink);
+    color: var(--panel);
+}

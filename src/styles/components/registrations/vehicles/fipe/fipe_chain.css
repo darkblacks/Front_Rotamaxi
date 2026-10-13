@@ -1,0 +1,10 @@
+.cf { display: flex; flex-direction: column; gap: 12px; }
+.cf__linha { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+.cf__campo { display: flex; flex-direction: column; gap: 4px; font-size: 0.75rem; font-weight: 600; color: var(--muted); }
+.cf__campo select { min-height: 38px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); font: 400 0.8125rem var(--font-sans); }
+.cf__erro { color: var(--bad); font-weight: 500; margin: 0; }
+.cf__ajuda { color: var(--muted); font-weight: 400; margin: 0; }
+.cf__link { border: 0; background: none; color: var(--accent); cursor: pointer; font: inherit; text-decoration: underline; }
+.cf__resultado { display: grid; grid-template-columns: 150px 1fr; gap: 6px 12px; margin: 0; padding: 14px; border: 1px solid var(--line); border-radius: 10px; font-size: 0.8125rem; }
+.cf__resultado dt { color: var(--muted); font-weight: 600; }
+.cf__resultado dd { margin: 0; }

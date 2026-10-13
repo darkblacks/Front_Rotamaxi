@@ -1,0 +1,61 @@
+.tile {
+    text-align: left;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: var(--ink);
+    font-family: inherit;
+    min-width: 0;
+}
+
+.tile--botao {
+    cursor: pointer;
+}
+
+.tile__rotulo {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.tile__valor {
+    font: 600 1.875rem/1 var(--font-mono);
+    letter-spacing: -0.03em;
+}
+
+.tile__complemento {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.tile__esqueleto {
+    display: block;
+    border-radius: 4px;
+    background: var(--track);
+    animation: tile-pulsar 1.2s ease-in-out infinite;
+}
+
+.tile__esqueleto--valor {
+    width: 76px;
+    height: 30px;
+}
+
+.tile__esqueleto--complemento {
+    width: 110px;
+    height: 12px;
+}
+
+@keyframes tile-pulsar {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}

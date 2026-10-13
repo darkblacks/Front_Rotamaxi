@@ -1,0 +1,24 @@
+.vv { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.vv h3 { margin: 0; font-size: 0.95rem; }
+.vv__bloco, .vv__caixa, .vv__manual { display: flex; flex-direction: column; gap: 12px; }
+.vv__caixa { padding: 14px; border: 1px solid var(--line); border-radius: 10px; align-items: flex-start; }
+.vv__manual { padding: 14px; border: 1px dashed var(--warn); border-radius: 10px; }
+.vv__selo { align-self: flex-start; display: inline-block; padding: 3px 8px; border-radius: 8px; background: var(--warn-soft); color: var(--warn); font-size: 0.6875rem; font-weight: 700; }
+.vv__dl { display: grid; grid-template-columns: minmax(130px, 200px) 1fr; gap: 8px 12px; margin: 0; font-size: 0.8125rem; }
+.vv__dl dt { color: var(--muted); font-weight: 600; } .vv__dl dd { margin: 0; }
+.vv__nota { margin: 0; color: var(--muted); font-size: 0.75rem; }
+.vv__linha { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.vv__acoes { display: flex; flex-wrap: wrap; gap: 8px; }
+.vv__ok, .vv__erro, .vv__indisp { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0; padding: 10px 14px; border-radius: 8px; font-size: 0.8rem; }
+.vv__ok { background: var(--ok-soft); color: var(--ok); } .vv__erro { background: var(--bad-soft); color: var(--bad); } .vv__indisp { background: var(--info-soft); color: var(--info); }
+.vv__err { color: var(--bad); }
+.vv__form { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px; }
+.vv__form label { display: flex; flex-direction: column; gap: 4px; font-size: 0.75rem; font-weight: 600; color: var(--muted); }
+.vv__form input { min-height: 38px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); font: 400 0.8125rem var(--font-sans); }
+.vv__btn { display: inline-flex; align-items: center; gap: 6px; min-height: 38px; padding: 6px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); font: 600 0.8125rem var(--font-sans); cursor: pointer; }
+.vv__btn:disabled { color: var(--muted); cursor: not-allowed; }
+.vv__btn--p { background: var(--accent); border-color: var(--accent); color: var(--brand-ink); }
+.vv__btn--p:disabled { color: var(--brand-ink-suave); opacity: 0.6; }
+.vv__btn--mini { min-height: 28px; padding: 2px 10px; }
+.vv__hist { margin: 0; padding-left: 18px; font-size: 0.8125rem; display: flex; flex-direction: column; gap: 6px; }
+@media (max-width: 700px) { .vv__btn { min-height: 44px; } .vv__dl { grid-template-columns: 1fr; } }

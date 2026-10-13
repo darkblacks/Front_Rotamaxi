@@ -1,0 +1,245 @@
+.plan,
+.planner {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.plan__cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.plan__titulo {
+    margin: 0;
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+.plan__acoes {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+a.botao {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.plan__filtros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+}
+
+.plan__filtro {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.plan__controle {
+    border: 1px solid var(--line);
+    background: var(--panel2);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 7px 8px;
+    font: 500 0.75rem var(--font-sans);
+}
+
+.plan__falha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: var(--bad-soft);
+    color: var(--bad);
+    font-size: 0.8125rem;
+}
+
+.plan__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 10px;
+}
+
+.servico {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--panel);
+}
+
+.servico__topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8125rem;
+}
+
+.servico__meta {
+    font-size: 0.75rem;
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+/* Montagem de manifesto */
+.planner__grade {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+}
+
+.planner__col {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+}
+
+.planner__mapa {
+    position: sticky;
+    top: 8px;
+    height: max(480px, calc(100vh - 220px));
+}
+
+.planner__campos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.planner__linha-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.planner__msgs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.75rem;
+}
+
+.planner__msg--erro {
+    color: var(--bad);
+}
+
+.planner__msg--aviso {
+    color: var(--warn);
+}
+
+.planner__msg--ok {
+    color: var(--ok);
+}
+
+.planner__servicos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.planner__servico {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 0.75rem;
+}
+
+.planner__servico-texto {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.planner__servico-texto small {
+    color: var(--muted);
+}
+
+.planner__aviso-sujo {
+    margin: 0;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: var(--warn-soft);
+    color: var(--warn);
+    font-size: 0.75rem;
+}
+
+@media (max-width: 1000px) {
+    .planner__grade {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .planner__mapa {
+        position: relative;
+        top: auto;
+        height: 50vh;
+        min-height: 300px;
+        order: -1;
+    }
+}
+
+.plan__sobre {
+    position: absolute;
+    left: 50%;
+    top: 12px;
+    transform: translateX(-50%);
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--warn-soft);
+    color: var(--warn);
+    border: 1px solid var(--warn);
+    font-size: 0.75rem;
+    z-index: 2;
+}
+
+.planner__dica {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.planner__ordem {
+    flex: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--panel);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

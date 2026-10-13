@@ -1,0 +1,83 @@
+.anexos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.anexos__falha {
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--bad-soft);
+    color: var(--bad);
+    font-size: 0.75rem;
+}
+
+.anexos__grade {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+}
+
+.anexo__miniatura {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel2);
+    color: var(--ink);
+    cursor: pointer;
+    text-align: left;
+}
+
+.anexo__icone {
+    font-size: 1.25rem;
+    color: var(--muted);
+}
+
+.anexo__descricao {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.anexo__quando,
+.anexo__acao {
+    font-size: 0.625rem;
+    color: var(--muted);
+}
+
+.aberto {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel2);
+}
+
+.aberto__imagem {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.aberto__legenda {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.aberto__link {
+    font-size: 0.8125rem;
+    font-weight: 600;
+}

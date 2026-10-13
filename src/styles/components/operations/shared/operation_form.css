@@ -1,0 +1,174 @@
+/* Formulários e botões das telas dos executores (conferente, portaria, motorista, CT, SAC). */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+}
+
+.form__grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 12px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.campo__rotulo {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.campo__entrada {
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    color: var(--ink);
+    font: 500 1rem var(--font-sans);
+    box-sizing: border-box;
+}
+
+textarea.campo__entrada {
+    min-height: 72px;
+    resize: vertical;
+}
+
+.campo__entrada:focus-visible,
+.botao:focus-visible {
+    outline: 2px solid var(--info);
+    outline-offset: 1px;
+}
+
+.campo__entrada:disabled {
+    opacity: 0.6;
+}
+
+.campo__entrada--erro {
+    border-color: var(--bad);
+}
+
+.campo__erro {
+    font-size: 0.75rem;
+    color: var(--bad);
+}
+
+.campo__dica {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.campo__linha {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.campo__linha .campo__entrada {
+    flex: 1;
+    min-width: 0;
+}
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 44px;
+    padding: 8px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    color: var(--ink);
+    font: 600 0.875rem var(--font-sans);
+    cursor: pointer;
+}
+
+.botao:hover:not(:disabled) {
+    filter: brightness(0.96);
+}
+
+.botao:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.botao--primario {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+[data-theme='escuro'] .botao--primario {
+    color: #1a0a0d;
+}
+
+.botao--ok {
+    background: var(--ok);
+    border-color: var(--ok);
+    color: #fff;
+}
+
+[data-theme='escuro'] .botao--ok {
+    color: #04170b;
+}
+
+.botao--grande {
+    min-height: 52px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.botao--pequeno {
+    min-height: 44px;
+    padding: 6px 12px;
+    font-size: 0.8125rem;
+}
+
+.form__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.form__acoes .botao {
+    flex: 1 1 160px;
+}
+
+.aviso {
+    margin: 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    background: var(--warn-soft);
+    color: var(--warn);
+}
+
+.aviso--erro {
+    background: var(--bad-soft);
+    color: var(--bad);
+}
+
+.aviso--ok {
+    background: var(--ok-soft);
+    color: var(--ok);
+}
+
+.aviso--info {
+    background: var(--info-soft);
+    color: var(--info);
+}
+
+.lista-simples {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.8125rem;
+}

@@ -1,0 +1,32 @@
+.paginacao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.paginacao__resumo {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.paginacao__botoes {
+    display: flex;
+    gap: 8px;
+}
+
+.paginacao__botao {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font: 500 0.75rem var(--font-sans);
+}
+
+.paginacao__botao:disabled {
+    color: var(--muted);
+    cursor: not-allowed;
+}

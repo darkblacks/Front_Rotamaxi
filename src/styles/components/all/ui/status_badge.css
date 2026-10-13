@@ -1,0 +1,8 @@
+.badge {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 10px;
+    justify-self: start;
+    white-space: nowrap;
+}

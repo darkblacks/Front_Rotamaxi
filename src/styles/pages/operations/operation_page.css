@@ -1,0 +1,156 @@
+/* Estrutura comum das telas dos executores: cabeçalho, abas, lista + painel de trabalho. */
+.pagina {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+}
+
+.pagina__cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.pagina__titulo {
+    margin: 0;
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+.pagina__recorte {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.8125rem;
+}
+
+.pagina__falha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--bad-soft);
+    color: var(--bad);
+    font-size: 0.8125rem;
+}
+
+.abas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.abas__aba {
+    min-height: 44px;
+    padding: 6px 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--panel);
+    color: var(--ink);
+    font: 600 0.8125rem var(--font-sans);
+    cursor: pointer;
+}
+
+.abas__aba--ativa {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.trabalho {
+    display: grid;
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+}
+
+.trabalho__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--panel);
+    color: var(--ink);
+    font: 400 0.8125rem var(--font-sans);
+    cursor: pointer;
+    min-height: 44px;
+}
+
+.item--ativo {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.item--alerta {
+    border-left: 4px solid var(--bad);
+}
+
+.item__topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.item__titulo {
+    font-weight: 700;
+    font-size: 0.9375rem;
+}
+
+.item__meta {
+    color: var(--muted);
+    font-size: 0.75rem;
+    overflow-wrap: anywhere;
+}
+
+.detalhe {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    gap: 10px 14px;
+    margin: 0 0 14px;
+}
+
+.detalhe dt {
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.detalhe dd {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+}
+
+@media (max-width: 860px) {
+    .trabalho {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

@@ -1,0 +1,59 @@
+.filiais {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.filiais__linha {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr) 52px;
+    gap: 10px;
+    align-items: center;
+}
+
+.filiais__codigo {
+    font: 600 0.75rem var(--font-mono);
+}
+
+.filiais__trilho {
+    height: 8px;
+    border-radius: 2px;
+    background: var(--track);
+    overflow: hidden;
+}
+
+.filiais__fatia {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.6s;
+}
+
+.filiais__taxa {
+    font: 500 0.75rem var(--font-mono);
+    text-align: right;
+}
+
+.filiais__esqueleto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filiais__linha-esqueleto {
+    height: 18px;
+    border-radius: 4px;
+    background: var(--track);
+    animation: filiais-pulsar 1.2s ease-in-out infinite;
+}
+
+@keyframes filiais-pulsar {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}

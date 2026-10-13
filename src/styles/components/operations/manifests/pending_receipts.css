@@ -1,0 +1,69 @@
+.canhotos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.canhotos__grade {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 8px 16px;
+    font-size: 0.75rem;
+    align-items: baseline;
+}
+
+.canhotos__cabecalho {
+    color: var(--muted);
+}
+
+.canhotos__cabecalho--numero {
+    text-align: right;
+}
+
+.canhotos__filial {
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.canhotos__numero {
+    font: 600 0.8125rem var(--font-mono);
+    text-align: right;
+}
+
+.canhotos__numero--upload {
+    color: var(--warn);
+}
+
+.canhotos__nota {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-wrap: pretty;
+}
+
+.canhotos__esqueleto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.canhotos__linha-esqueleto {
+    height: 16px;
+    border-radius: 4px;
+    background: var(--track);
+    animation: canhotos-pulsar 1.2s ease-in-out infinite;
+}
+
+@keyframes canhotos-pulsar {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}

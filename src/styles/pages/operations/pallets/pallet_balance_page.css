@@ -1,0 +1,152 @@
+.pagina {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pagina__cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.pagina__titulo {
+    margin: 0;
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+.pagina__recorte {
+    color: var(--muted);
+    font-size: 0.8125rem;
+}
+
+.pagina__falha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--bad-soft);
+    color: var(--bad);
+    font-size: 0.8125rem;
+}
+
+.pagina__botao {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font: 500 0.75rem var(--font-sans);
+}
+
+.pagina__tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 12px;
+}
+
+.pagina__contador {
+    font: 500 0.75rem var(--font-mono);
+    color: var(--muted);
+}
+
+.clientes {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.clientes th {
+    padding: 0 0 8px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    font-size: 0.6875rem;
+    color: var(--muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.clientes__direita {
+    text-align: right;
+}
+
+.clientes__ordem {
+    border: 0;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+    text-transform: inherit;
+    letter-spacing: inherit;
+}
+
+.cliente td {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.8125rem;
+}
+
+.cliente {
+    cursor: pointer;
+}
+
+.cliente:hover td {
+    background: var(--panel2);
+}
+
+.cliente--cobrar .cliente__nome {
+    font-weight: 600;
+}
+
+.cliente--aberto td {
+    background: var(--panel2);
+}
+
+.cliente__identificacao {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.cliente__nome {
+    font-size: 0.8125rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cliente__cidade {
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.cliente__movimentos {
+    font: 500 0.75rem var(--font-mono);
+    color: var(--muted);
+}
+
+.cliente__saldo {
+    font: 600 0.875rem var(--font-mono);
+}
+
+.cliente__saldo--positivo {
+    color: var(--warn);
+}
+
+.cliente__saldo--negativo {
+    color: var(--info);
+}
+
+.cliente__saldo--neutro {
+    color: var(--muted);
+}

@@ -1,0 +1,239 @@
+/* StopList */
+.paradas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.parada {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+    padding: 9px 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    color: var(--ink);
+    cursor: pointer;
+    font: inherit;
+}
+
+.parada--ativa {
+    border-color: var(--info);
+    background: var(--info-soft);
+}
+
+.parada__ordem {
+    flex: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parada__corpo {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.parada__nome {
+    font-size: 0.8125rem;
+    font-weight: 650;
+    overflow-wrap: anywhere;
+}
+
+.parada__meta {
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.parada__atraso {
+    margin-left: 6px;
+    font-weight: 700;
+}
+
+.parada__atraso--leve,
+.parada__atraso--atencao {
+    color: var(--warn);
+}
+
+.parada__atraso--risco,
+.parada__atraso--critico {
+    color: var(--bad);
+}
+
+/* EtaAlertCard */
+.alerta {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+}
+
+.alerta__titulo {
+    font-size: 1rem;
+}
+
+.alerta__texto {
+    font-size: 0.75rem;
+}
+
+.alerta__nivel {
+    align-self: flex-start;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.alerta--ok {
+    background: var(--ok-soft);
+    color: var(--ok);
+    border-color: transparent;
+}
+
+.alerta--leve,
+.alerta--atencao {
+    background: var(--warn-soft);
+    color: var(--warn);
+    border-color: var(--warn);
+}
+
+.alerta--risco,
+.alerta--critico {
+    background: var(--bad-soft);
+    color: var(--bad);
+    border-color: var(--bad);
+}
+
+/* OccurrencesPanel */
+.ocorrencias {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ocorrencia {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--panel);
+}
+
+.ocorrencia__topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.ocorrencia__tipo {
+    font-size: 0.8125rem;
+    text-transform: capitalize;
+}
+
+.ocorrencia__texto {
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+.ocorrencia__meta {
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+/* MapLegend */
+.legenda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.legenda__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+}
+
+.legenda__lista li {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legenda__ponto {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.legenda__linha {
+    width: 22px;
+    height: 0;
+    display: inline-block;
+}
+
+.legenda__linha--rota {
+    border-top: 3px solid #1a73e8;
+}
+
+.legenda__linha--trajeto {
+    border-top: 3px dashed #182435;
+}
+
+.legenda__sinais {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.legenda__sinais dt {
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.legenda__sinais dd {
+    margin: 0;
+}
+
+.legenda__sinais dd[data-sinal='offline'],
+.legenda__sinais dd[data-sinal='sem_sinal'] {
+    color: var(--bad);
+}
+
+.parada__servico {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.6875rem;
+    color: var(--ink);
+}

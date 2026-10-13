@@ -1,0 +1,20 @@
+.filtro {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.filtro__rotulo {
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.filtro__controle {
+    border: 1px solid var(--line);
+    background: var(--panel2);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 6px 8px;
+    font: 500 0.75rem var(--font-sans);
+}

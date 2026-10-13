@@ -1,0 +1,43 @@
+.trajeto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.trajeto__desenho {
+    width: 100%;
+    height: 200px;
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel2);
+}
+
+.trajeto__extremos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+    margin: 0;
+}
+
+.trajeto__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.trajeto__item dt {
+    font-size: 0.625rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.trajeto__item dd {
+    margin: 0;
+    font: 500 0.75rem var(--font-mono);
+}
+
+.trajeto__aviso {
+    font-size: 0.6875rem;
+    color: var(--muted);
+}

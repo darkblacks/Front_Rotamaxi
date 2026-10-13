@@ -1,0 +1,127 @@
+.reatribuicao {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.reatribuicao__impedimento {
+    margin: 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: var(--warn-soft);
+    color: var(--warn);
+    font-size: 0.75rem;
+}
+
+.reatribuicao__falha {
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: var(--bad-soft);
+    color: var(--bad);
+    font-size: 0.75rem;
+}
+
+.reatribuicao__concluida {
+    margin: 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: var(--ok-soft);
+    color: var(--ok);
+    font-size: 0.75rem;
+}
+
+.reatribuicao__campos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.reatribuicao__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    flex: 1 1 180px;
+}
+
+.reatribuicao__campo--largo {
+    flex: 999 1 280px;
+}
+
+.reatribuicao__rotulo {
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.reatribuicao__controle {
+    border: 1px solid var(--line);
+    background: var(--panel2);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 7px 9px;
+    font: 500 0.8125rem var(--font-sans);
+    width: 100%;
+}
+
+.reatribuicao__controle--texto {
+    resize: vertical;
+}
+
+.reatribuicao__controle:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.reatribuicao__erro {
+    font-size: 0.6875rem;
+    color: var(--bad);
+}
+
+.reatribuicao__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.reatribuicao__nota {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.reatribuicao__confirmacao {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border: 1px dashed var(--line);
+    border-radius: 8px;
+}
+
+.reatribuicao__pergunta {
+    margin: 0;
+    font-size: 0.8125rem;
+}
+
+.reatribuicao__botao {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 7px 12px;
+    cursor: pointer;
+    font: 500 0.75rem var(--font-sans);
+}
+
+.reatribuicao__botao--primario {
+    background: var(--ink);
+    color: var(--panel);
+    border-color: var(--ink);
+}
+
+.reatribuicao__botao:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}

@@ -1,0 +1,105 @@
+.entregas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.entregas__legenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.entregas__chave {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.entregas__cor {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+}
+
+.entregas__cor--ok {
+    background: var(--ok);
+}
+
+.entregas__cor--bad {
+    background: var(--bad);
+}
+
+/* O trilho é o token de fundo do design: nos dois temas ele contrasta com o painel. */
+.entregas__cor--track {
+    background: var(--track);
+    border: 1px solid var(--line);
+}
+
+.entregas__linha {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 88px;
+    align-items: center;
+    gap: 12px;
+}
+
+.entregas__codigo {
+    font: 600 0.75rem var(--font-mono);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.entregas__trilho {
+    display: flex;
+    height: 14px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: var(--track);
+    min-width: 0;
+}
+
+.entregas__fatia {
+    transition: width 0.6s;
+}
+
+.entregas__fatia--ok {
+    background: var(--ok);
+}
+
+.entregas__fatia--bad {
+    background: var(--bad);
+}
+
+.entregas__numeros {
+    font: 500 0.75rem var(--font-mono);
+    color: var(--muted);
+    text-align: right;
+}
+
+.entregas__esqueleto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.entregas__barra-esqueleto {
+    height: 14px;
+    border-radius: 3px;
+    background: var(--track);
+    animation: entregas-pulsar 1.2s ease-in-out infinite;
+}
+
+@keyframes entregas-pulsar {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}

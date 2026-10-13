@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.claude_backup/
+.claude/settings_pre_merge.json
+.env
+.env.*
+!.env.example
+.claude_backup/

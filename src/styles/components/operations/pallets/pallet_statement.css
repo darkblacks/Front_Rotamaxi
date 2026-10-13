@@ -1,0 +1,89 @@
+.extrato {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.extrato__cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.extrato__cliente {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.extrato__legenda {
+    font-size: 0.6875rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.extrato__nome {
+    font-size: 1.0625rem;
+    font-weight: 600;
+}
+
+.extrato__periodo {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.extrato__saldo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.extrato__valor {
+    font: 600 1.625rem/1 var(--font-mono);
+}
+
+.extrato__data {
+    font: 500 0.75rem var(--font-mono);
+    color: var(--muted);
+}
+
+.extrato__tipo {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.extrato__tipo--entrada {
+    background: var(--warn-soft);
+    color: var(--warn);
+}
+
+.extrato__tipo--saida {
+    background: var(--ok-soft);
+    color: var(--ok);
+}
+
+.extrato__viagem {
+    font-size: 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.extrato__manifesto {
+    font: 500 0.75rem var(--font-mono);
+}
+
+.extrato__numero {
+    text-align: right;
+    font: 600 0.8125rem var(--font-mono);
+}
+
+.extrato__numero--acumulado {
+    font-weight: 500;
+}

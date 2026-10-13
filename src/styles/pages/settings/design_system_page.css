@@ -1,0 +1,54 @@
+.amostras {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.amostras__cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.amostras__titulo {
+    margin: 0;
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+.amostras__botao {
+    border: 1px solid var(--line);
+    background: var(--panel2);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font: 500 0.75rem var(--font-sans);
+}
+
+.amostras__tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 12px;
+}
+
+.amostras__linha {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+}
+
+.amostras__rotulo {
+    font: 500 0.75rem var(--font-mono);
+    color: var(--muted);
+}
+
+.amostras__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}

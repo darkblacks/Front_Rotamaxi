@@ -1,0 +1,86 @@
+.divergencias {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.divergencias__linha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel2);
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.divergencias__linha:hover {
+    border-color: var(--accent);
+    color: var(--ink);
+}
+
+.divergencias__identificacao {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 140px;
+    min-width: 0;
+}
+
+.divergencias__identificacao strong {
+    font-weight: 600;
+    font-size: 0.8125rem;
+}
+
+.divergencias__identificacao small {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.divergencias__numeros {
+    display: flex;
+    gap: 12px;
+    font: 500 0.75rem var(--font-mono);
+}
+
+.divergencias__numero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.divergencias__numero small {
+    font: 0.625rem var(--font-sans);
+    color: var(--muted);
+}
+
+.divergencias__numero--diferenca {
+    color: var(--bad);
+}
+
+.divergencias__esqueleto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.divergencias__linha-esqueleto {
+    height: 58px;
+    border-radius: 8px;
+    background: var(--track);
+    animation: divergencias-pulsar 1.2s ease-in-out infinite;
+}
+
+@keyframes divergencias-pulsar {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}

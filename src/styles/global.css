@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+@import './css_color_variables.css';
+@import './css_typography_variables.css';
+
+@source '../**/*.vue';
+
+@theme {
+    --font-sans: 'Roboto', system-ui, sans-serif;
+    --font-mono: 'Roboto Mono', ui-monospace, monospace;
+}
+
+/*
+ * Tokens da identidade visual RotaMaxi. O tema claro mora em
+ * `:root`; o escuro redefine os mesmos nomes sob `[data-theme="escuro"]`, que o SPA
+ * escreve no elemento raiz. Nenhuma cor literal fora deste bloco.
+ */
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    background: var(--bg);
+    color: var(--ink);
+}
+
+[data-theme='escuro'] body {
+    background: var(--bg);
+    color: var(--ink);
+}
+
+a {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--ink);
+}
+
+@keyframes slidein {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Novo design system: formulários sempre legíveis nos dois temas. */
+button, input, select, textarea {font-family: var(--font-sans);}
+button {transition: filter .15s ease, background .15s ease;}
+input,select,textarea{accent-color:var(--accent);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+::selection{background:var(--accent-soft);color:var(--ink);}

@@ -1,0 +1,104 @@
+.cadeia {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.cadeia__vazio {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.8125rem;
+}
+
+.cadeia__elos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 130px), 1fr));
+    gap: 8px;
+}
+
+.elo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--panel);
+    min-width: 0;
+}
+
+.elo--pendente {
+    border-style: dashed;
+    background: var(--panel2);
+    color: var(--muted);
+}
+
+.elo--divergente {
+    border-color: var(--bad);
+    background: var(--bad-soft);
+}
+
+.elo--informativo:not(.elo--divergente) {
+    border-color: var(--info);
+}
+
+.elo__rotulo {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.elo__valor {
+    font: 700 1.5rem var(--font-mono);
+    line-height: 1.1;
+}
+
+.elo__dif {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--bad);
+}
+
+.elo__meta,
+.elo__nota {
+    font-size: 0.6875rem;
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+.cadeia__alerta {
+    margin: 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: var(--bad-soft);
+    color: var(--bad);
+    font-size: 0.8125rem;
+    font-weight: 600;
+}
+
+.cadeia__saldo {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+.cadeia--compacta .elo {
+    padding: 6px 8px;
+}
+
+.cadeia--compacta .elo__valor {
+    font-size: 1.125rem;
+}
+
+@media (max-width: 520px) {
+    .cadeia__elos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

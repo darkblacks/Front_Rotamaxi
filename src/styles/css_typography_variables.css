@@ -1,0 +1,8 @@
+/* Global typography tokens. */
+:root {
+    --typography-scale: 115%;
+}
+
+html {
+    font-size: var(--typography-scale);
+}

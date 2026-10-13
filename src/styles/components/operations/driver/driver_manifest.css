@@ -1,0 +1,42 @@
+.servico {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--panel);
+    min-width: 0;
+}
+
+.servico__topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.servico__titulo {
+    font-size: 0.9375rem;
+    overflow-wrap: anywhere;
+}
+
+.servico__meta {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.servico__check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+
+.servico__check input {
+    width: 22px;
+    height: 22px;
+}

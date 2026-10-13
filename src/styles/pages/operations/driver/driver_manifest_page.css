@@ -1,0 +1,79 @@
+.motorista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 720px;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 0;
+}
+
+.motorista__cabecalho {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.motorista__titulo {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.motorista__recorte {
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+.motorista__mapa {
+    height: 280px;
+    min-width: 0;
+}
+
+.proxima {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.proxima__rotulo {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+}
+
+.proxima__nome {
+    font-size: 1.125rem;
+    overflow-wrap: anywhere;
+}
+
+.proxima__meta {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+.proxima__atraso {
+    color: var(--bad);
+}
+
+.aceite {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+}
+
+.aceite:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.aceite__texto {
+    margin: 0;
+    font-size: 0.875rem;
+}

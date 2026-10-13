@@ -1,0 +1,15 @@
+.selo {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.selo--ok { background: var(--ok-soft); color: var(--ok); }
+.selo--warn { background: var(--warn-soft); color: var(--warn); }
+.selo--info { background: var(--info-soft); color: var(--info); }
+.selo--neutro { background: var(--track); color: var(--muted); }

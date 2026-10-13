@@ -1,0 +1,67 @@
+.seletor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    align-items: end;
+}
+
+.seletor__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.seletor__campo--largo {
+    grid-column: span 2;
+}
+
+.seletor__rotulo {
+    font-size: 0.6875rem;
+    color: var(--muted);
+}
+
+.seletor__controle {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid var(--line);
+    background: var(--panel2);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 7px 8px;
+    font: 500 0.75rem var(--font-sans);
+}
+
+.seletor__camadas {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+.seletor__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--ink);
+    cursor: pointer;
+}
+
+.seletor__limpar {
+    margin-left: auto;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--muted);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font: 500 0.75rem var(--font-sans);
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .seletor__campo--largo {
+        grid-column: 1 / -1;
+    }
+}

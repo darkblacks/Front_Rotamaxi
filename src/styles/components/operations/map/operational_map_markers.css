@@ -1,0 +1,53 @@
+/* Marcadores HTML criados via DOM pelo MapLibre: CSS global de propósito (não scoped). */
+.mapa-ponto {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 45%);
+    color: #fff;
+    font: 700 9px/14px system-ui, sans-serif;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.mapa-ponto--destaque {
+    width: 24px;
+    height: 24px;
+    line-height: 20px;
+    font-size: 11px;
+    outline: 3px solid rgb(26 115 232 / 35%);
+}
+
+.mapa-ponto--concluido {
+    opacity: 0.55;
+}
+
+.mapa-objeto {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #3a4656;
+    border: 2px solid #6b7685;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 40%);
+    cursor: default;
+}
+
+.mapa-objeto--phone {
+    border-style: dotted;
+}
+
+.mapa-objeto--offline {
+    opacity: 0.55;
+    border-style: dashed;
+    filter: grayscale(1);
+}
+
+.mapa-objeto[data-sinal='em_movimento'] {
+    border-color: #1e8e3e;
+}
